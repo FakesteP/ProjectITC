@@ -1,0 +1,274 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+body {
+  font-family: "Rubik", sans-serif;
+  background-color: #f1f1f1;
+}
+
+.navigation {
+  display: flex;
+  background: #f1f1f1;
+  border-bottom: 0.5px solid #f1f1f1;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem 3rem;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 99999;
+}
+
+.navigation .logo {
+  color: #f1f1f1;
+  font-weight: 700;
+  font-size: 2rem;
+  background-color: #010101;
+  padding: 0.25rem;
+}
+
+.navigation .navbar a {
+  color: #010101;
+  padding: 0.5rem;
+  margin: 0 1rem;
+  display: inline-block;
+}
+
+.navigation .navbar a:hover {
+  color: #010101;
+  transition: 200ms ease-in-out;
+}
+
+.navigation .navbar a::after {
+  content: "";
+  display: block;
+  width: 0;
+  padding-bottom: 0.3rem;
+  border-bottom: 0.1rem solid #010101;
+  left: 0;
+  bottom: -10px;
+  transition: 150ms linear;
+}
+
+.navigation .navbar a:hover:after {
+  width: 100%;
+}
+
+.navigation .hamburger img {
+  width: 2rem;
+  height: auto;
+}
+
+.hamburger{
+  display: block;
+  cursor: pointer;
+}
+
+#ham {
+  display: none;
+}
+
+@media only screen and (max-width: 766px) {
+  html {
+    font-size: 70%;
+  }
+
+  #ham {
+    display: inline-block;
+  }
+
+  .navigation .navbar{
+    position: absolute;
+    top: 70px;
+    right: 0;
+    background-color: #f1f1f1;
+    width: 100%;
+    height: 30vh;
+    opacity: 0;
+    transition: 200ms ease-in-out;
+  }
+  
+  .navigation .navbar a{
+    display: block;
+    width: fit-content;
+    margin: 1.5rem auto;
+    padding: 0.5rem;
+    font-size: 1.5rem;
+    text-align: center;
+  }
+
+  .navigation .navbar.active {
+    opacity: 100;
+    right: 0;
+    transition: 200ms ease-in-out;
+    z-index: 99999;
+  }
+}
+
+@media (max-width: 468px) {
+  html {
+    font-size: 60%;
+  }
+
+  #ham {
+    display: inline-block;
+  }
+
+  .navigation .navbar{
+    position: absolute;
+    top: 70px;
+    right: 0;
+    background-color: #f1f1f1;
+    width: 100%;
+    height: 30vh;
+    opacity: 0;
+    transition: 200ms ease-in-out;
+  }
+  
+  .navigation .navbar a{
+    display: block;
+    width: fit-content;
+    margin: 1.5rem auto;
+    padding: 0.5rem;
+    font-size: 1.5rem;
+    text-align: center;
+  }
+
+  .navigation .navbar.active {
+    opacity: 100;
+    right: 0;
+    transition: 200ms ease-in-out;
+    z-index: 99999;
+  }
+
+}
+
+.collection {
+  margin: 1rem 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.catalog {
+  position: relative;
+  overflow: hidden;
+}
+
+.collection .catalog img {
+  min-width: 30rem;
+  height: 30rem;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+  padding: 1rem;
+}
+
+.content {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(255, 255, 255, 0.5);
+  display: flex;
+  font-size: 1.5rem;
+  font-weight: 400;
+  justify-content: center;
+  align-items: center;
+  color: #010101;
+}
+
+.catalog .content {
+  transition: 200ms ease-in-out;
+}
+
+.catalog .content {
+  opacity: 0;
+}
+
+.catalog:hover .content {
+  opacity: 1;
+}
+
+footer {
+  background-color: #010101;
+  color: #f1f1f1;
+  text-align: center;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+footer .partner img{
+  width: 2rem;
+  height: auto;
+  margin-bottom: 0.5rem;
+
+}
+
+/* end index html sectiom */
+/* About page */
+.about-page {
+  display: flex;
+  font-size: 1.25rem;
+  margin: 2rem 3rem;
+  flex-wrap: wrap;
+}
+
+.about-page img {
+  display: flex;
+  max-width: 100%;
+}
+
+.about-page .desc {
+  margin-top: 2rem;
+  display: block;
+  padding-left: 2rem;
+  padding-right: 5rem;
+  font-size: 1.1rem;
+}
+
+.about-page .desc span {
+  font-weight: bold;
+}
+/* About page */
+
+/* sneakers page */
+.sneakers-section {
+  margin: 1rem 3rem;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.other {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.sneakers-section .upper img {
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+  align-items: center;
+}
+
+.sneakers-section .upper p {
+  margin: 2rem 3rem;
+  margin-right: 15rem;
+}
+
+.sneakers-section .upper span {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.sneakers-section .other img {
+  max-width: 28rem;
+  height: auto;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+  padding: 1rem;
+  border-radius: 5%;
+}
+/* sneakers page */
